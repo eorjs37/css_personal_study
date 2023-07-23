@@ -110,6 +110,7 @@ body {
 
 .current_music {
     display: flex;
+    justify-content: space-between;
     padding: 1.2em 0;
     font-size: 16px;
 }
@@ -121,23 +122,27 @@ body {
 }
 
 .current_music .current_music_info {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
     color: var(--white);
     font-size: 16px;
-    margin-left: 1.5em;
+    position: relative;
+    margin-left: 1em;
 }
 
 .current_music_info .music_title {
     font-size: 2em;
     font-weight: 700;
     line-height: 1.8;
+    margin-top: 1.5em;
 }
 
 .current_music_info .singer {
     font-size: 1em;
     line-height: 1;
+    margin-top: 0.3em;
+}
+
+.current_music_info .select_icon {
+    margin-top: 3.2em;
 }
 
 
