@@ -38,15 +38,19 @@ body {
     color: var(--white);
     display: flex;
     align-items: center;
-    padding: 12px 15px;
+    padding: 3px 15px;
     font-size: 16px;
     font-weight: 500;
     line-height: 24px;
 }
 
+.curation_settings .item.last {
+    padding-right: 17px;
+}
+
 
 .mt-3px {
-    margin-top: 3px;
+    margin-top: 8px;
 }
 
 .bar {
