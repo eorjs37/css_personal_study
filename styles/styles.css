@@ -15,17 +15,13 @@ body {
     background: url(/assets/img/afternoon_bg.png) no-repeat center 0;
 }
 
-.music_box {
-    max-width: 700px;
-    width: 100%;
-}
-
 .curation_settings {
     display: inline-flex;
     justify-content: flex-start;
     background: hsla(0, 0%, 100%, .12);
     border-radius: 20px;
     cursor: pointer;
+    font-size: 16px;
 }
 
 .curation_settings .img {
@@ -38,7 +34,7 @@ body {
     color: var(--white);
     display: flex;
     align-items: center;
-    padding: 3px 15px;
+    padding: 0.2em 1em;
     font-size: 16px;
     font-weight: 500;
     line-height: 24px;
@@ -48,6 +44,12 @@ body {
     padding-right: 17px;
 }
 
+.item .arrow_off {
+    display: flex;
+    justify-content: center;
+    margin-left: 1em;
+}
+
 
 .mt-3px {
     margin-top: 8px;
@@ -55,4 +57,100 @@ body {
 
 .bar {
     margin-left: 1em;
+}
+
+.music_box {
+    margin-top: 10px;
+}
+
+.music_info_container {
+    display: flex;
+    justify-content: space-between;
+    width: 52vw;
+}
+
+.music_info {
+    width: 75%;
+    background: hsla(0, 0%, 100%, .16);
+    border: 1px solid hsla(0, 0%, 100%, .12);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, .08);
+    backdrop-filter: blur(30px);
+    border-radius: 16px;
+    font-size: 16px;
+}
+
+.music_info_header {
+    text-align: center;
+    padding: 0.8em 0;
+    font-size: inherit;
+    color: var(--white);
+    border-bottom: 1px solid hsla(0, 0%, 100%, .16);
+}
+
+.channel_text {
+    font-size: 0.6em;
+    border-radius: 50%;
+    border: 1px solid var(--white);
+    padding: 4px 5px;
+    line-height: 1em;
+    vertical-align: middle;
+}
+
+.channel_container {
+    width: 10%;
+}
+
+.music_info_box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    font-size: 16px;
+}
+
+.current_music {
+    display: flex;
+    padding: 1.2em 0;
+    font-size: 16px;
+}
+
+.current_music .music_img {
+    width: 240px;
+    height: 240px;
+    border-radius: 3%;
+}
+
+.current_music .current_music_info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: var(--white);
+    font-size: 16px;
+    margin-left: 1.5em;
+}
+
+.current_music_info .music_title {
+    font-size: 2em;
+    font-weight: 700;
+    line-height: 1.8;
+}
+
+.current_music_info .singer {
+    font-size: 1em;
+    line-height: 1;
+}
+
+
+.circle {
+    width: 48px;
+    height: 48px;
+    background: transparent;
+    cursor: pointer;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.16);
+    opacity: 0;
+}
+
+.circle:hover {
+    opacity: 1;
 }
