@@ -21,7 +21,8 @@ body {
     background: hsla(0, 0%, 100%, .12);
     border-radius: 20px;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 1vw;
+    width: 75%;
 }
 
 .curation_settings .img {
@@ -34,7 +35,7 @@ body {
     color: var(--white);
     display: flex;
     align-items: center;
-    padding: 0.2em 1em;
+    padding: 0.2em 0.7em;
     font-size: 16px;
     font-weight: 500;
     line-height: 24px;
@@ -61,12 +62,12 @@ body {
 
 .music_box {
     margin-top: 10px;
+    width: 1024px;
 }
 
 .music_info_container {
     display: flex;
     justify-content: space-between;
-    width: 52vw;
 }
 
 .music_info {
@@ -77,6 +78,7 @@ body {
     backdrop-filter: blur(30px);
     border-radius: 16px;
     font-size: 16px;
+    overflow: hidden;
 }
 
 .music_info_header {
@@ -106,13 +108,28 @@ body {
     align-items: center;
     position: relative;
     font-size: 16px;
+    border-bottom: 1px solid hsla(0, 0%, 100%, .16);
 }
+
+.prev_music {
+    position: absolute;
+    top: 30%;
+    left: 6%;
+}
+
+.prev_music_img {
+    width: 120px;
+    height: 120px;
+    border-radius: 8px;
+}
+
 
 .current_music {
     display: flex;
     justify-content: space-between;
     padding: 1.2em 0;
     font-size: 16px;
+    z-index: 1;
 }
 
 .current_music .music_img {
@@ -143,19 +160,80 @@ body {
 
 .current_music_info .select_icon {
     margin-top: 3.2em;
+    display: flex;
+    justify-content: space-between;
 }
 
 
 .circle {
-    width: 48px;
-    height: 48px;
-    background: transparent;
+    width: 40px;
+    height: 40px;
     cursor: pointer;
     border-radius: 50%;
-    background: rgba(255, 255, 255, 0.16);
-    opacity: 0;
+
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circle .icon {
+    width: 45%;
+    height: 45%;
+    z-index: 1;
 }
 
 .circle:hover {
-    opacity: 1;
+    background: rgba(255, 255, 255, 0.16);
+}
+
+.next_music {
+    position: absolute;
+    top: 30%;
+    right: -5%;
+}
+
+.next_music_img {
+    width: 120px;
+    height: 120px;
+    border-radius: 8px;
+}
+
+.music_play_box {
+    padding: 16px 0;
+    width: 50%;
+    margin-left: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.music_control {
+    width: 48px;
+    height: 48px;
+    cursor: pointer;
+    border-radius: 50%;
+    background-color: var(--white);
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(-50%);
+}
+
+.music_control .music_control_btn {
+    width: 36%;
+    height: 36%;
+}
+
+.volume_control {
+    display: flex;
+    align-items: center;
+}
+
+@media screen and (max-width: 1024px) {
+    .music_box {
+        width: 78vw;
+    }
+
+    .curation_settings .item {
+        font-size: calc(1vw);
+    }
 }
