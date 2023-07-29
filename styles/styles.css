@@ -376,8 +376,10 @@ body {
 
 /* 1200px 이하 */
 @media screen and (max-width: 1200px) {
+
+    .curration_box,
     .music_box {
-        width: 78vw;
+        width: 90vw;
     }
 
     .curation_settings .item {
@@ -398,6 +400,21 @@ body {
     .info_box_content {
         font-size: calc(1vw - 2px);
         line-height: 1vw;
+        margin-left: 1px;
+    }
+
+    .prev_music_img {
+        width: 12vw;
+        height: 12vw;
+    }
+
+    .current_music .music_img {
+        width: 15vw;
+        height: 15vw;
+    }
+
+    .current_music .current_music_info {
+        font-size: 7px;
     }
 
     .btn {
@@ -420,4 +437,10 @@ body {
         height: calc(1vw * 2);
     }
 
+}
+
+@media screen and (max-width: 768px) {
+    .pc {
+        display: none;
+    }
 }
