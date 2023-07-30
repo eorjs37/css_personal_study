@@ -8,7 +8,7 @@ body {
 .container {
     max-width: 1920px;
     width: 100%;
-    height: 100vh;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -374,6 +374,10 @@ body {
     vertical-align: middle;
 }
 
+.mobile {
+    display: none;
+}
+
 /* 1200px 이하 */
 @media screen and (max-width: 1200px) {
 
@@ -439,8 +443,100 @@ body {
 
 }
 
+/* 768px 이하 */
 @media screen and (max-width: 768px) {
+    .container {
+        align-items: flex-start
+    }
+
     .pc {
         display: none;
     }
+
+    .mobile {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        margin-top: 85px;
+    }
+
+    .m_album_img {
+        display: flex;
+        justify-content: center;
+    }
+
+    .m_album_img .img {
+        width: 280px;
+        height: 280px;
+        border-radius: 8px;
+    }
+
+    .m_music_playlist {
+        display: flex;
+        justify-content: space-between;
+        margin-top: calc(1vw + 10px);
+        padding: 0 10px;
+    }
+
+    .m_music_playlist>.m_music_info {
+        width: 280px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: calc(1vw + 10px);
+        line-height: calc(1vw + 18px);
+        color: var(--white);
+    }
+
+    .m_music_title {
+        font-size: calc(1vw + 12px);
+        line-height: calc(1vw + 20px);
+        font-weight: 700;
+    }
+
+    .m_music_playlist>.like {
+        width: 22px;
+        display: flex;
+        align-items: center;
+    }
+
+    .like>.like_img {
+        width: 22px;
+        height: 22px;
+        vertical-align: middle;
+    }
+
+    .m_music_playlist>.more {
+        background: none;
+        border: none;
+        width: 22px;
+        display: flex;
+        align-items: center;
+    }
+
+    .m_play_btn {
+        display: flex;
+        justify-content: center;
+        margin-top: calc(1vw + 10px);
+    }
+
+    .m_music_control {
+        border: none;
+        background: none;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background-color: var(--white);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .m_music_control .control_img {
+        width: 20px;
+        height: 20px;
+    }
 }
+
+/* 576px 이하 */
+@media screen and (max-width: 576px) {}
