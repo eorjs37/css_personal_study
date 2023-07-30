@@ -1,8 +1,16 @@
+html,
+body {
+    margin: 0;
+    height: 100%;
+    overflow: auto;
+}
+
 body {
     background-color: var(--body-color);
-    height: 100%;
     width: 100%;
     box-sizing: border-box;
+    background: url(/assets/img/afternoon_bg.png) no-repeat center 0;
+    background-size: cover;
 }
 
 .container {
@@ -12,8 +20,6 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: url(/assets/img/afternoon_bg.png) no-repeat center 0;
-    background-size: cover;
 }
 
 .curation_settings {
@@ -139,7 +145,6 @@ body {
     border: 2px solid var(--current);
 }
 
-.equalizer {}
 
 .channel_body {
     padding: 20px 20px 16px;
@@ -378,6 +383,10 @@ body {
     display: none;
 }
 
+.muscic_bottom {
+    display: none;
+}
+
 /* 1200px 이하 */
 @media screen and (max-width: 1200px) {
 
@@ -407,6 +416,10 @@ body {
         margin-left: 1px;
     }
 
+    .prev_music {
+        top: 20%;
+    }
+
     .prev_music_img {
         width: 12vw;
         height: 12vw;
@@ -419,6 +432,15 @@ body {
 
     .current_music .current_music_info {
         font-size: 7px;
+    }
+
+    .next_music {
+        top: 20%;
+    }
+
+    .next_music_img {
+        width: 12vw;
+        height: 12vw;
     }
 
     .btn {
@@ -458,6 +480,7 @@ body {
         display: flex;
         flex-direction: column;
         margin-top: 85px;
+        position: relative;
     }
 
     .m_album_img {
@@ -536,7 +559,43 @@ body {
         width: 20px;
         height: 20px;
     }
-}
 
-/* 576px 이하 */
-@media screen and (max-width: 576px) {}
+    .muscic_bottom {
+        width: 100%;
+        height: 8vh;
+        bottom: 0;
+        position: absolute;
+        background: hsla(0, 0%, 100%, .24);
+        backdrop-filter: blur(30px);
+        display: flex;
+        justify-content: space-between;
+        padding: 0 10px;
+        box-sizing: border-box;
+    }
+
+    .muscic_bottom .music_center {
+        display: flex;
+        align-items: center;
+        font-size: calc(1vw + 10px);
+        color: var(--white);
+    }
+
+    .m_channel_text {
+        font-size: 0.6em;
+        border-radius: 100px;
+        border: 1px solid var(--white);
+        padding: 3px 6px;
+        line-height: 1em;
+        vertical-align: middle;
+    }
+
+    .music_center .channel_name {
+        font-size: calc(1vw + 13px);
+        margin-left: 6px;
+    }
+
+    .muscic_bottom .bottom_icon {
+        display: flex;
+        align-items: center;
+    }
+}
