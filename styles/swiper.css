@@ -15,6 +15,10 @@
 }
 
 @media (max-width: 1024px) {
+    .swiper {
+        height: 200px;
+    }
+
     .swiper_img {
         width: 200px;
         height: 200px;
