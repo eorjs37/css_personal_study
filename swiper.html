@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles/_variables.css">
+    <link rel="stylesheet" href="./styles/reset.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./styles/swiper.css">
+</head>
+
+<body>
+    <div class="swiper mySwiper">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide">
+                <img class="swiper-slide swiper_img" src="./assets/img/swiper/slide_album_01.png" alt="img1">
+            </div>
+            <div class="swiper-slide">
+                <img class="swiper_img" src="./assets/img/swiper/slide_album_02.png" alt="img2">
+            </div>
+            <div class="swiper-slide">
+                <img class="swiper_img" src="./assets/img/swiper/slide_album_03.png" alt="img3">
+            </div>
+            <div class="swiper-slide">
+                <img class="swiper_img" src="./assets/img/swiper/slide_album_04.png" alt="img4">
+            </div>
+            <div class="swiper-slide">
+                <img class="swiper_img" src="./assets/img/swiper/slide_album_05.png" alt="img5">
+            </div>
+            <div class="swiper-slide">
+                <img class="swiper-slide swiper_img" src="./assets/img/swiper/slide_album_01.png" alt="img1">
+            </div>
+            <div class="swiper-slide">
+                <img class="swiper_img" src="./assets/img/swiper/slide_album_02.png" alt="img2">
+            </div>
+            <div class="swiper-slide">
+                <img class="swiper_img" src="./assets/img/swiper/slide_album_03.png" alt="img3">
+            </div>
+            <div class="swiper-slide">
+                <img class="swiper_img" src="./assets/img/swiper/slide_album_04.png" alt="img4">
+            </div>
+            <div class="swiper-slide">
+                <img class="swiper_img" src="./assets/img/swiper/slide_album_05.png" alt="img5">
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script>
+        const swiper = new Swiper('.mySwiper', {
+            // Optional parameters
+            // spaceBetween: 30,
+            loop: true,
+            slidesPerView: 4.1,
+            centeredSlides: true,
+            allowSlideNext: true,
+            allowSlidePrev: true,
+            autoplay: {
+                delay: 120,
+                disableOnInteraction: false, // 쓸어 넘기거나 버튼 클릭 시 자동 슬라이드 정지.
+            },
+        });
+
+        setTimeout(() => {
+            swiper.autoplay.start()
+        }, 1000);
+
+    </script>
+
+</body>
+
+</html>
