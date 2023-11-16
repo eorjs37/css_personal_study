@@ -18,18 +18,23 @@ html {
     display: flex;
 }
 
-.nav {
+.nav,
+.nav.extend {
     box-sizing: border-box;
     border: 1px solid black;
+    /* visibility: hidden; */
+    width: 0%;
+}
 
-    animation: navsize_down 2s ease-in-out forwards;
+.nav.extend {
+    animation: navsize_down .5s cubic-bezier(.7, 0, .84, 0) forwards;
 }
 
 .nav.on {
     display: block;
     width: 70%;
     visibility: visible;
-    animation: navsize_up 2s ease forwards;
+    animation: navsize_up .5s cubic-bezier(.7, 0, .84, 0) forwards;
 }
 
 @keyframes navsize_up {
@@ -38,20 +43,36 @@ html {
     }
 
     to {
-        width: 100%;
+        width: 70%;
     }
 
 }
 
 @keyframes navsize_down {
     from {
-        width: 100%;
+        width: 70%;
     }
 
     to {
         width: 0%;
         visibility: hidden;
     }
+}
+
+.music_box {
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid blue;
+
+}
+
+.music_box.extend {
+    animation: music_boxsize_up .5s cubic-bezier(.7, 0, .84, 0) forwards;
+}
+
+.music_box.on {
+    width: 30%;
+    animation: music_boxsize_down .5s cubic-bezier(.7, 0, .84, 0) forwards;
 }
 
 @keyframes music_boxsize_down {
@@ -72,16 +93,4 @@ html {
     to {
         width: 100%;
     }
-}
-
-.music_box {
-    width: 100%;
-    box-sizing: border-box;
-    border: 1px solid blue;
-    animation: music_boxsize_up 2s ease-in-out forwards;
-}
-
-.music_box.on {
-    width: 30%;
-    animation: music_boxsize_down 2s ease forwards;
 }

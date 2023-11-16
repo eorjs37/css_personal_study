@@ -22,12 +22,16 @@ const btnClick = () => {
     if (elenave.classList.contains('on')) {
         // @ts-ignore
         elenave.classList.remove('on');
+        elenave.classList.add("extend")
         // @ts-ignore
         elemusicbox.classList.remove('on');
+        elemusicbox.classList.add("extend")
     } else {
         // @ts-ignore
+        elenave.classList.remove("extend")
         elenave.classList.add("on");
         // @ts-ignore
+        elemusicbox.classList.remove("extend")
         elemusicbox.classList.add("on")
     }
 }
